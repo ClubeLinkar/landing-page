@@ -387,14 +387,59 @@
             <li><a class="scroll-link" href="#top-content">Topo</a></li>
             <li><a class="scroll-link" href="#features">Por que</a></li>
             <li><a class="scroll-link" href="#how-it-works">Como funciona</a></li>
-            <li><a href="#">Termos de utilização</a></li>
-            <li><a href="#">Privacidade</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#termosUsoModal">Termos de utilização</a></li>
+            <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#termosUsoModal">Open Modal</button> -->
+            <li><a href="#" data-toggle="modal" data-target="#privacidadeModal">Privacidade</a></li>
           </ul>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Modal -->
+  <div class="modal fade" id="termosUsoModal" role="dialog" >
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Termos de utilização</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            Aqui deve aparecer o texto dos termos e utilização.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="modal fade" id="privacidadeModal" role="dialog" >
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Política de Privacidade</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            Aqui deve aparecer o texto da política de privacidade
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
   <!-- Javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
