@@ -1,0 +1,21 @@
+{
+  "name": "linkar-landing-page",
+  "description": "Landing Page Linkar",
+  "main": "index.js",
+  "authors": [
+    "Lennon Jesus <lennon.jesus@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "linkar"
+  ],
+  "homepage": "www.clubelinkar.com.br",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
