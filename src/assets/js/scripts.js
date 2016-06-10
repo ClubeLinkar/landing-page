@@ -13,38 +13,38 @@ function scroll_to(clicked_link, nav_height) {
 
 
 jQuery(document).ready(function() {
-	
+
 	/*
 	    Navigation
-	*/	
+	*/
 	$('a.scroll-link').on('click', function(e) {
 		e.preventDefault();
 		scroll_to($(this), 0);
 	});
-	
+
     /*
         Background slideshow
     */
-    $('.top-content').backstretch("assets/img/backgrounds/1.jpg");
-    $('.testimonials-container').backstretch("assets/img/backgrounds/1.jpg");
-    
+    $('.top-content').backstretch("assets/images/backgrounds/1.jpg");
+    $('.testimonials-container').backstretch("assets/images/backgrounds/1.jpg");
+
     $('a[data-toggle="tab"]').on('shown.bs.tab', function(){
     	$('.testimonials-container').backstretch("resize");
     });
-    
+
     /*
         Wow
     */
     new WOW().init();
-	
+
 });
 
 
 jQuery(window).load(function() {
-	
+
 	/*
 		Hidden images
 	*/
 	$(".testimonial-image img").attr("style", "width: auto !important; height: auto !important;");
-	
+
 });
