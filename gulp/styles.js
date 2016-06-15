@@ -19,6 +19,7 @@ gulp.task('styles', function () {
   var injectFiles = gulp.src([
     paths.src + '/{app,components}/**/*.less',
     '!' + paths.src + '/app/index.less',
+    '!' + paths.src + '/app/media-queries.less',
     '!' + paths.src + '/app/vendor.less'
   ], { read: false });
 
