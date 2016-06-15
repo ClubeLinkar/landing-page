@@ -69,6 +69,11 @@ gulp.task('images', function () {
     .pipe(gulp.dest(paths.dist + '/assets/images/'));
 });
 
+gulp.task('scripts', function () {
+  return gulp.src(paths.src + '/assets/js/*.js')
+    .pipe(gulp.dest(paths.dist + '/assets/js/'));
+});
+
 gulp.task('fonts', function () {
   return gulp.src($.mainBowerFiles())
     .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
@@ -91,9 +96,14 @@ gulp.task('misc', function () {
     .pipe(gulp.dest(paths.dist + '/'));
 });
 
+gulp.task('pngico', function () {
+  return gulp.src(paths.src + '/assets/ico/*')
+    .pipe(gulp.dest(paths.dist + '/assets/ico/'));
+});
+
 gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
 
-gulp.task('build', ['html', 'images', 'fonts', 'fontawesome','bootstrapfonts','misc']);
+gulp.task('build', ['html', 'images', 'fonts', 'fontawesome','bootstrapfonts','misc', 'scripts', 'pngico']);
