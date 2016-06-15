@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="linkar-landing-page">
 
 <head>
 
@@ -18,9 +18,23 @@
 
 
 
-  <link rel="stylesheet" href="assets/css/animate.css">
+  <!-- <link rel="stylesheet" href="assets/css/animate.css"> -->
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/media-queries.css">
+
+
+  <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+  <!-- <link rel="stylesheet" href="app/vendor.css"> -->
+  <!-- bower:css -->
+  <!-- run `gulp wiredep` to automaticaly populate bower styles dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:css({.tmp/serve,src}) styles/app.css -->
+  <!-- inject:css -->
+  <!-- css files will be automaticaly insert here -->
+  <!-- endinject -->
+  <!-- endbuild -->
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -82,6 +96,7 @@
           <div class="r-form-1-top">
             <div class="r-form-1-top-left">
               <h3>Registre-se</h3>
+              <h3>{{'Blah'}}</h3>
               <p>Preencha os dados abaixo:</p>
             </div>
             <div class="r-form-1-top-right">
@@ -366,8 +381,8 @@
         <div class="col-sm-4 footer-contact-info wow fadeInDown">
           <h3>Entre em contato!</h3>
           <p><i class="fa fa-map-marker"></i> Rua Dr. Mário Guimarães, 428, Sala 308, Centro, Nova Iguaçu, RJ, CEP 26255-230</p>
-          <p><i class="fa fa-phone"></i> Phone: (21) 4545-4545</p>
-          <p><i class="fa fa-envelope"></i> Email: <a href="mailto:comerciallinkar@gmail.com">comerciallinkar@gmail.com</a></p>
+          <p><i class="fa fa-phone"></i> Phone: (21) 3021-1666</p>
+          <p><i class="fa fa-envelope"></i> Email: <a href="mailto:clubelinkar@gmail.com">clubelinkar@gmail.com</a></p>
         </div>
         <div class="col-sm-4 footer-social wow fadeInUp">
           <h3>Estamos nas redes sociais!</h3>
@@ -444,12 +459,39 @@
   </div>
 
   <!-- Javascript -->
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="assets/js/jquery.backstretch.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/retina-1.1.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+
+  <!-- build:js(src) scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- run `gulp wiredep` to automaticaly populate bower script dependencies -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+  <!-- inject:js -->
+  <!-- js files will be automaticaly insert here -->
+  <!-- endinject -->
+
+  <!-- inject:partials -->
+  <!-- angular templates will be automatically converted in js and inserted here -->
+  <!-- endinject -->
+  <!-- endbuild -->
+
+
+
+  <!-- <script src="assets/js/jquery.backstretch.min.js"></script> -->
+
+  <!-- <script src="assets/js/wow.min.js"></script> -->
+  <!-- <script src="assets/js/retina-1.1.0.min.js"></script> -->
   <script src="assets/js/scripts.js"></script>
+
+  <!-- <script src="app/app.module.js"></script>
+  <script src="app/home.controller.js"></script>
+  <script src="app/home.route.js"></script> -->
 
   <!--[if lt IE 10]>
   <script src="assets/js/placeholder.js"></script>
