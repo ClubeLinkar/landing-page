@@ -18,7 +18,9 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-6 col-sm-offset-3 r-form-1-box wow fadeInUp">
+      <div class="col-sm-6 col-sm-offset-3 r-form-1-box wow fadeInUp"
+        ng-if="!vm.signupSuccess">
+
         <div class="r-form-1-top">
           <div class="r-form-1-top-left">
             <h3>Registre-se</h3>
@@ -32,22 +34,49 @@
           <form role="form" action="" method="post">
             <div class="form-group">
               <label class="sr-only" for="r-form-1-first-name">Nome</label>
-              <input type="text" name="r-form-1-first-name" placeholder="Seu Nome" class="r-form-1-first-name form-control" id="r-form-1-first-name">
+              <input type="text" name="r-form-1-first-name" placeholder="Seu Nome" class="r-form-1-first-name form-control" id="r-form-1-first-name"
+                ng-model="vm.user.name">
             </div>
             <div class="form-group">
               <label class="sr-only" for="r-form-1-email">Email</label>
-              <input type="text" name="r-form-1-email" placeholder="seu@email.com" class="r-form-1-email form-control" id="r-form-1-email">
+              <input type="email" name="r-form-1-email" placeholder="seu@email.com" class="r-form-1-email form-control" id="r-form-1-email"
+                ng-model="vm.user.email">
             </div>
             <div class="form-group">
               <label class="sr-only" for="r-form-1-last-name">CPF</label>
-              <input type="text" name="r-form-1-last-name" placeholder="012.345.678-90" class="r-form-1-last-name form-control" id="r-form-1-last-name">
+              <input type="text" name="r-form-1-last-name" placeholder="012.345.678-90" class="r-form-1-last-name form-control" id="r-form-1-last-name"
+                ng-model="vm.user.cpf"
+                ui-br-cpf-mask>
+            </div>
+            <div class="form-group">
+              <label class="sr-only" for="r-form-1-password">Senha</label>
+              <input type="password" name="r-form-1-password" placeholder="**********" class="r-form-1-password form-control" id="r-form-1-password"
+                ng-model="vm.user.password">
             </div>
 
-
-            <button type="submit" class="btn">Registrar!</button>
+            <button type="button" class="btn" ng-click="vm.save()">Registrar!</button>
           </form>
         </div>
       </div>
+    </div>
+
+    <div class="col-sm-6 col-sm-offset-3 r-form-1-box wow fadeInUp"
+      ng-if="vm.signupSuccess">
+
+      <div class="r-form-1-top">
+        <div class="r-form-1-top-left">
+          <h3>Olá, {{vm.user.name}}!</h3>
+          <p>
+            Creditamos 100 lkr pra você por ter se cadastrado conosco.</p>
+          <p>
+            Fique ligado em nossas novidades. ;-)
+          </p>
+        </div>
+        <div class="r-form-1-top-right">
+          <i class="fa fa-smile-o"></i>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -119,95 +148,7 @@
   </div>
 </div>
 
-<!-- Depoimentos -->
-<!-- <div class="testimonials-container section-container section-container-image-bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 testimonials section-description wow fadeIn">
-        <h2>Depoimentos</h2>
-        <p>Veja o que nossos clientes dizem de nós:</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 testimonial-list wow fadeInUp">
-        <div role="tabpanel">
-          <!- - Tab panes - ->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="tab1">
-              <div class="testimonial-image">
-                <img src="xxxxxxx" alt="" data-at2x="xxxxxxx">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                  Lorem ipsum dolor sit amet, consectetur..."<br />
-                  <a href="#">Lorem Ipsum, dolor.co.uk</a>
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="tab2">
-              <div class="testimonial-image">
-                <img src="xxxxxxx" alt="" data-at2x="xxxxxxx">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                  ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                  lobortis nisl ut aliquip ex ea commodo consequat..."<br />
-                  <a href="#">Minim Veniam, nostrud.com</a>
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="tab3">
-              <div class="testimonial-image">
-                <img src="xxxxxxx" alt="" data-at2x="xxxxxxx">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
-                  Lorem ipsum dolor sit amet, consectetur..."<br />
-                  <a href="#">Lorem Ipsum, dolor.co.uk</a>
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade" id="tab4">
-              <div class="testimonial-image">
-                <img src="xxxxxxx" alt="" data-at2x="xxxxxxx">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                  ex ea commodo consequat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                  lobortis nisl ut aliquip ex ea commodo consequat..."<br />
-                  <a href="#">Minim Veniam, nostrud.com</a>
-                </p>
-              </div>
-            </div>
-          </div>
-          <!- - Nav tabs - ->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active">
-              <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation">
-              <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation">
-              <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation">
-              <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-<!-- Depoimentos -->
+<!-- Produtos -->
 <div class="testimonials-container section-container section-container-image-bg">
   <div class="container">
     <div class="row">
@@ -364,7 +305,7 @@
                 </p>
               </div>
             </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab12">
+            <!-- <div role="tabpanel" class="tab-pane fade in " id="tab12">
               <div class="testimonial-image">
                 <img src="http://yesacademia.com.br/images/slider/slide1.jpg" alt="" data-at2x="http://yesacademia.com.br/images/slider/slide1.jpg">
               </div>
@@ -376,7 +317,7 @@
                   9.500 lkr
                 </p>
               </div>
-            </div>
+            </div> -->
 
           </div>
           <!-- Nav tabs -->
@@ -414,9 +355,9 @@
             <li role="presentation" class="">
               <a href="#tab11" aria-controls="tab11" role="tab" data-toggle="tab"></a>
             </li>
-            <li role="presentation" class="">
+            <!-- <li role="presentation" class="">
               <a href="#tab12" aria-controls="tab12" role="tab" data-toggle="tab"></a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
@@ -449,12 +390,12 @@
       </div>
       <div class="col-sm-4 col-sm-offset-2 faq-box wow fadeInDown">
         <div class="faq-number">2</div>
-        <h3>Consigo ver meus pontos acumulados?</h3>
+        <h3>Como consigo ver meus pontos acumulados?</h3>
         <p>
-          Através de nosso sistema você pode conferir todo o seu histórico de transações com nossos parceiros.
+          Muito em breve, através de nosso sistema você poderá conferir todo o seu histórico de transações com nossos parceiros.
         </p>
         <p>
-          Você também terá acesso a seu extrato de pontos Linkar.
+          Você também terá acesso a seu extrato detalhado de pontos Linkar.
         </p>
       </div>
     </div>
@@ -502,6 +443,25 @@
       </div>
     </div>
     <div class="row">
+      <div class="col-sm-4 col-sm-offset-1 faq-box wow fadeInUp">
+        <div class="faq-number">7</div>
+        <h3>Serão sempre as mesmas ofertas?</h3>
+        <p>
+          A lista de ofertas disponíveis para você resgatar poderá aumentar ou diminuir de acordo com a disponibilidade dos produtos e serviços.
+        </p>
+        <p>
+          À medida que novos parceiros sejam inseridos em nossa rede essa lista tende a aumentar cada vez mais
+        </p>
+      </div>
+      <div class="col-sm-4 col-sm-offset-2 faq-box wow fadeInDown">
+        <div class="faq-number">8</div>
+        <h3>O valor das ofertas pode sofrer alterações?</h3>
+        <p>
+          Sim. Esse valor é definido pela nossa equipe em conjunto com os parceiros que oferecem as ofertas.
+        </p>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-sm-12 section-bottom-button wow fadeInUp">
         <a class="btn btn-link-1 scroll-link" href="#top-content">Cadastre-se <i class="fa fa-angle-right"></i></a>
       </div>
@@ -518,9 +478,9 @@
         <p>
           Somos uma equipe apaixonada por desenvolver meios de aproximar as pessoas dos produtos e empresas que mais interessam.
         </p>
-        <p>
+        <!-- <p>
           <a class="scroll-link" href="#about-us">Saiba mais</a>
-        </p>
+        </p> -->
       </div>
       <div class="col-sm-4 footer-contact-info wow fadeInDown">
         <h3>Entre em contato!</h3>
@@ -529,11 +489,12 @@
         <p><i class="fa fa-envelope"></i> Email: <a href="mailto:clubelinkar@gmail.com">clubelinkar@gmail.com</a></p>
       </div>
       <div class="col-sm-4 footer-social wow fadeInUp">
-        <h3>Estamos nas redes sociais!</h3>
+        <!-- <h3>Estamos nas redes sociais!</h3> -->
+        <h3>Curta nossa página no Facebook!</h3>
         <p>
-          <a href="https://www.facebook.com/clubeLinkar"><i class="fa fa-facebook"></i></a>
-          <a href="#"><i class="fa fa-twitter"></i></a>
-          <a href="#"><i class="fa fa-google-plus"></i></a>
+          <a href="https://www.facebook.com/clubeLinkar" target="_blank"><i class="fa fa-facebook"></i></a>
+          <!-- <a href="#"><i class="fa fa-twitter"></i></a> -->
+          <!-- <a href="#"><i class="fa fa-google-plus"></i></a> -->
         </p>
       </div>
     </div>
