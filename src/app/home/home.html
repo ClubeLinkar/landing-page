@@ -24,7 +24,7 @@
         <div class="r-form-1-top">
           <div class="r-form-1-top-left">
             <h3>Registre-se, e ganhe 100 pontos!</h3>
-            <p>Preencha os dados abaixo:</p>
+            <span>Preencha os dados abaixo:</span>
           </div>
           <div class="r-form-1-top-right">
             <i class="fa fa-pencil"></i>
@@ -50,9 +50,14 @@
             </div>
             <div class="form-group">
               <label class="sr-only" for="r-form-1-password">Senha</label>
-              <input type="password" name="r-form-1-password" placeholder="**********" class="r-form-1-password form-control" id="r-form-1-password"
+              <input type="password" name="r-form-1-password" placeholder="Escolha sua senha" class="r-form-1-password form-control" id="r-form-1-password"
                 ng-model="vm.user.password">
             </div>
+            <!-- <div class="form-group">
+              <label class="sr-only" for="r-form-1-password-retype">Confirmação de senha</label>
+              <input type="password" name="r-form-1-password-retype" placeholder="Confirme a senha" class="r-form-1-password-retype form-control" id="r-form-1-password-retype"
+                ng-model="vm.user.password_retype">
+            </div> -->
 
             <button type="button" class="btn" ng-click="vm.save()">Registrar!</button>
           </form>
@@ -127,251 +132,6 @@
     </div>
   </div>
 </div>
-
-<!-- Veja como é fácil Linkar! -->
-<!-- <div class="how-it-works-container section-container section-container-gray-bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-5 how-it-works-box wow fadeInLeft">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0GsLUF5uOQI?list=PLRFhxC14XNIozVztolqKXybjgpanEX6FP&amp;showinfo=0"
-          webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="col-sm-6 col-sm-offset-1 how-it-works-box how-it-works-box-right wow fadeInUp">
-        <h3>Veja como é fácil Linkar!</h3>
-        <p>
-          A Linkar é o clube de vantagens que conecta você às empresas da Baixada Fluminense.
-        </p>
-        <p>
-          De maneira simples você poderá aproveitar as melhores ofertas das melhores empresas da Baixada.
-        </p>
-        <p>
-          <a class="learn-more scroll-link" href="#top-content">Cadastre-se!</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
-<!-- Produtos -->
-<!-- <div class="testimonials-container section-container section-container-image-bg">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 testimonials section-description wow fadeIn">
-        <h2>Produtos</h2>
-        <p>Confira os produtos que já estão disponíveis para você trocar por pontos Linkar</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-1 testimonial-list wow fadeInUp">
-        <div role="tabpanel">
-          <!- - Tab panes - ->
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade in active" id="tab1">
-              <div class="testimonial-image">
-                <img src="http://images.submarino.com.br/produtos/01/00/item/119195/9/119195941_1GG.jpg" alt="" data-at2x="http://images.submarino.com.br/produtos/01/00/item/119195/9/119195941_1GG.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Cafeteira Expresso Nespresso 19 BAR Ruby Red Inissia<br />
-                </p>
-                <p>
-                  4.000 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab2">
-              <div class="testimonial-image">
-                <img src="http://img.shoptime.com.br/produtos/01/00/item/120436/5/120436589_1GG.jpg" alt="" data-at2x="http://img.shoptime.com.br/produtos/01/00/item/120436/5/120436589_1GG.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Aspirador de Pó Electrolux ERG12 54W 2 em 1 Sem Fio Ergorápido Branco<br />
-                </p>
-                <p>
-                  3.990 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab3">
-              <div class="testimonial-image">
-                <img src="http://tramontinapro.com.br/pt-br/image/44833522/44833522PDM001B-maleta-com-soquetes-e-acessorios-12-tramontina.jpg?v" alt="" data-at2x="http://tramontinapro.com.br/pt-br/image/44833522/44833522PDM001B-maleta-com-soquetes-e-acessorios-12-tramontina.jpg?v">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Maleta Com Soquetes E Acessórios 1/2 Catraca Reversível Tramontina Pro<br />
-                </p>
-                <p>
-                  2.490 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab4">
-              <div class="testimonial-image">
-                <img src="http://iacom1-a.akamaihd.net/produtos/01/00/sku/9224/4/9224414_4GG.jpg" alt="" data-at2x="http://iacom1-a.akamaihd.net/produtos/01/00/sku/9224/4/9224414_4GG.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Bola De Futsal Penalty Max 1000<br />
-                </p>
-                <p>
-                  1.995 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab5">
-              <div class="testimonial-image">
-                <img src="http://thumbs.buscape.com.br/jogo-de-panelas/tramontina-versalhes-20699090-aluminio-5-pecas_200x200-PU4d74e_1.jpg" alt="" data-at2x="http://thumbs.buscape.com.br/jogo-de-panelas/tramontina-versalhes-20699090-aluminio-5-pecas_200x200-PU4d74e_1.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Conjunto de Panelas Tramontina Versalhes Alumínio Antiaderente 5 Peças<br />
-                </p>
-                <p>
-                  1.290 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab6">
-              <div class="testimonial-image">
-                <img src="http://isuba1-a.akamaihd.net/produtos/01/00/item/7302/1/7302118GG.jpg" alt="" data-at2x="http://isuba1-a.akamaihd.net/produtos/01/00/item/7302/1/7302118GG.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Panela de Pressão Tramontina Valencia 6,0L 20cm - Púrpura<br />
-                </p>
-                <p>
-                  2.700 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab7">
-              <div class="testimonial-image">
-                <img src="http://images.submarino.com.br/produtos/01/00/item/122079/3/122079386_1GG.png" alt="" data-at2x="http://images.submarino.com.br/produtos/01/00/item/122079/3/122079386_1GG.png">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Smartphone Motorola Moto E 2ª Geração Dual Chip Desbloqueado Android Lollipop 5.0 Tela 4.5" 8GB 3G Wi-Fi Câmera de 5MP - Preto<br />
-                </p>
-                <p>
-                  5.999 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab8">
-              <div class="testimonial-image">
-                <img src="http://isuba1-a.akamaihd.net/produtos/01/00/item/8096/8/8096890_1GG.jpg" alt="" data-at2x="http://isuba1-a.akamaihd.net/produtos/01/00/item/8096/8/8096890_1GG.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Bíblia em Áudio Completa MP3 : com a Voz de Cid Moreira<br />
-                </p>
-                <p>
-                  500 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab9">
-              <div class="testimonial-image">
-                <img src="https://static.omelete.uol.com.br/media/extras/capas/Os-10-Mandamentos.jpg" alt="" data-at2x="https://static.omelete.uol.com.br/media/extras/capas/Os-10-Mandamentos.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Dvd - Os Dez Mandamentos - O Filme<br />
-                </p>
-                <p>
-                  500 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab10">
-              <div class="testimonial-image">
-                <img src="http://ishop.s8.com.br/produtos/01/00/item/122899/0/122899085_1GG.jpg" alt="" data-at2x="http://ishop.s8.com.br/produtos/01/00/item/122899/0/122899085_1GG.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Tablet Samsung Galaxy Tab A P550 16GB Wi-Fi Tela 9.7" Android 5.0 Quad-Core - Branco<br />
-                </p>
-                <p>
-                  14.000 lkr
-                </p>
-              </div>
-            </div>
-            <div role="tabpanel" class="tab-pane fade in " id="tab11">
-              <div class="testimonial-image">
-                <img src="http://images.shoptime.com.br/produtos/01/00/item/121756/5/121756517_1GG.jpg" alt="" data-at2x="http://images.shoptime.com.br/produtos/01/00/item/121756/5/121756517_1GG.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Tablet Asus Fonepad 7 8GB Wi Fi 3G Tela 7" Android 4.4 Processador Intel Atom Dual Core - Branco<br />
-                </p>
-                <p>
-                  6.699 lkr
-                </p>
-              </div>
-            </div>
-            <!- - <div role="tabpanel" class="tab-pane fade in " id="tab12">
-              <div class="testimonial-image">
-                <img src="http://yesacademia.com.br/images/slider/slide1.jpg" alt="" data-at2x="http://yesacademia.com.br/images/slider/slide1.jpg">
-              </div>
-              <div class="testimonial-text">
-                <p>
-                  Seis meses de malhação na Academia XYZ de Mesquita<br />
-                </p>
-                <p>
-                  9.500 lkr
-                </p>
-              </div>
-            </div> - ->
-
-          </div>
-          <!- - Nav tabs - ->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active">
-              <a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation">
-              <a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation">
-              <a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation">
-              <a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation" class="">
-              <a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation" class="">
-              <a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation" class="">
-              <a href="#tab7" aria-controls="tab7" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation" class="">
-              <a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation" class="">
-              <a href="#tab9" aria-controls="tab9" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation" class="">
-              <a href="#tab10" aria-controls="tab10" role="tab" data-toggle="tab"></a>
-            </li>
-            <li role="presentation" class="">
-              <a href="#tab11" aria-controls="tab11" role="tab" data-toggle="tab"></a>
-            </li>
-            <!- - <li role="presentation" class="">
-              <a href="#tab12" aria-controls="tab12" role="tab" data-toggle="tab"></a>
-            </li> - ->
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <!-- FAQ -->
 <div class="faq-container section-container">
