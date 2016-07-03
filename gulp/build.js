@@ -2,6 +2,8 @@
 
 var gulp = require('gulp');
 
+var imagemin = require('gulp-imagemin');
+
 var paths = gulp.paths;
 
 var $ = require('gulp-load-plugins')({
@@ -105,5 +107,10 @@ gulp.task('clean', function (done) {
   $.del([paths.dist + '/', paths.tmp + '/'], done);
 });
 
+gulp.task('imagemin', function () {
+  return gulp.src('src/assets/images/*')
+       .pipe(imagemin())
+       .pipe(gulp.dest('dist/assets/images'))
+})
 
-gulp.task('build', ['html', 'images', 'fonts', 'fontawesome','bootstrapfonts','misc', 'scripts', 'pngico']);
+gulp.task('build', ['html', 'images', 'fonts', 'fontawesome','bootstrapfonts','misc', 'scripts', 'pngico', 'imagemin']);
