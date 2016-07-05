@@ -108,7 +108,7 @@ gulp.task('clean', function (done) {
 });
 
 gulp.task('imagemin', function () {
-  return gulp.src('src/assets/images/*')
+  return gulp.src('src/assets/images/**/*')
        .pipe(imagemin())
        .pipe(gulp.dest('dist/assets/images'))
 })
