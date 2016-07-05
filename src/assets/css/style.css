@@ -126,11 +126,16 @@ ul.navbar-nav {
 .navbar-inverse ul.navbar-nav li a:focus { color: #fff; outline: 0; opacity: 1; border: 0; }
 
 .navbar-brand {
-	width: 77px;
-	background: url('../../assets/ico/favicon-32x32.png') left center no-repeat;
+	width: 40px;
+	background: url('../../assets/images/linkar-icon.png') left center no-repeat;
 	text-indent: -99999px;
 }
 
+.navbar-jcb-brand {
+	width: 77px;
+	background: url('../../assets/images/conecta-baixada-icon.png') left center no-repeat;
+	text-indent: -99999px;
+}
 
 /***** Top content *****/
 
