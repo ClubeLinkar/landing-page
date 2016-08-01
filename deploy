@@ -1,0 +1,4 @@
+#!/bin/sh
+rm -rf dist/
+gulp build
+scp -r dist/* root@clubelinkar.com.br:/www_linkar/
