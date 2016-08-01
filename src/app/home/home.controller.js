@@ -5,7 +5,7 @@
     .module('linkar-landing-page')
     .controller('Home', HomeController);
 
-  function HomeController(User, ngToast) {
+  function HomeController(User, ngToast, $stateParams) {
 
     var vm = this;
 
@@ -41,6 +41,10 @@
       if (!vm.user.password) {
         hasErrors = true;
         ngToast.danger("Por favor, escolha sua senha. Ela será utilizada para sua autenticação no sistema.");
+      }
+
+      if ($stateParams.identifier) {
+          vm.user.referer = $stateParams.identifier;
       }
 
       if (!hasErrors) {
