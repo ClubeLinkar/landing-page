@@ -1,4 +1,6 @@
 #!/bin/sh
 rm -rf dist/
 gulp build
+cp -rf src/admin dist
+ssh root@lkr-http rm -rf /www_linkar/*
 scp -r dist/* root@clubelinkar.com.br:/www_linkar/
