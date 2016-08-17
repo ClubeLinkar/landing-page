@@ -24,13 +24,20 @@
         <div class="r-form-1-top">
           <div class="r-form-1-top-left">
             <h3>Registre-se, e ganhe 100 pontos!</h3>
-            <span>Preencha os dados abaixo:</span>
+            <span>Informe seus dados:</span>
           </div>
           <div class="r-form-1-top-right">
             <i class="fa fa-pencil"></i>
           </div>
         </div>
         <div class="r-form-1-bottom">
+
+          <p><a type="button" class="btn btn-primary btn-social-login" ng-click="vm.firebaseAuth('facebook')" ><i class="fa fa-facebook"></i> Usando o Facebook</a></p>
+          <p><a type="button" class="btn btn-danger btn-social-login" ng-click="vm.firebaseAuth('google')" ><i class="fa fa-google"></i> Usando o Google</a></p>
+          <p><a type="button" class="btn btn-warning btn-social-login" ng-click="vm.isFormVisible = true" ><i class="fa fa-pencil"></i> Preencher manualmente</a></p>
+
+        </div>
+        <div class="r-form-1-bottom" ng-if="vm.isFormVisible">
           <form role="form" action="" method="post">
             <div class="form-group">
               <label class="sr-only" for="r-form-1-first-name">Nome</label>
@@ -53,17 +60,19 @@
               <input type="password" name="r-form-1-password" placeholder="Escolha sua senha" class="r-form-1-password form-control" id="r-form-1-password"
                 ng-model="vm.user.password">
             </div>
-            <!-- <div class="form-group">
+            <div class="form-group">
               <label class="sr-only" for="r-form-1-password-retype">Confirmação de senha</label>
               <input type="password" name="r-form-1-password-retype" placeholder="Confirme a senha" class="r-form-1-password-retype form-control" id="r-form-1-password-retype"
                 ng-model="vm.user.password_retype">
-            </div> -->
+            </div>
 
             <button type="button" class="btn" ng-click="vm.save()">Registrar!</button>
           </form>
         </div>
       </div>
     </div>
+
+
 
     <div class="col-sm-6 col-sm-offset-3 r-form-1-box wow fadeInUp"
       ng-if="vm.signupSuccess">
@@ -101,6 +110,20 @@
 
 
 <div id="fb-root"></div>
+
+
+<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC6XteBeXdKXhJPId2Jd28XfYHElRW6RkM",
+    authDomain: "linkar-7d9e9.firebaseapp.com",
+    databaseURL: "https://linkar-7d9e9.firebaseio.com",
+    storageBucket: "linkar-7d9e9.appspot.com",
+  };
+  firebase.initializeApp(config);
+</script>
+
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;

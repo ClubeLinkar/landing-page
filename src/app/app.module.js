@@ -9,6 +9,7 @@
     'ngResource',
     'ui.router',
     'ngToast',
-    'ui.utils.masks'
+    'ui.utils.masks',
+    'firebase'
   ]);
 })();
