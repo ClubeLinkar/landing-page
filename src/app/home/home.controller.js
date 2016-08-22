@@ -13,7 +13,7 @@
 
     vm.init = init;
     vm.save = save;
-    vm.firebaseAuth = firebaseAuth;
+    vm.login = login;
 
     vm.init();
 
@@ -23,6 +23,8 @@
     }
 
     function save() {
+
+      ngToast.dismiss();
 
       var hasErrors;
 
@@ -36,10 +38,10 @@
         ngToast.danger("Por favor, preencha o campo e-mail com um e-mail válido.");
       }
 
-      if (!vm.user.cpf) {
-        hasErrors = true;
-        ngToast.danger("Por favor, preencha o campo CPF com um número válido.");
-      }
+      // if (!vm.user.cpf) {
+      //   hasErrors = true;
+      //   ngToast.danger("Por favor, preencha o campo CPF com um número válido.");
+      // }
 
       if (!vm.user.password) {
         hasErrors = true;
@@ -76,23 +78,44 @@
       });
     }
 
-    function firebaseAuth(provider) {
-      auth.$signInWithPopup(provider).then(function(firebaseUser) {
-        console.log(firebaseUser);
-        console.log("Signed in as:", firebaseUser.user.providerData[0]);
+    function login(provider) {
+      if (provider === 'facebook') {
+        auth.$signInWithPopup(provider, {
+          remember: "sessionOnly", scope: "email, public_profile, user_friends, user_birthday, user_likes, user_posts"
+        }).then(authSuccessful).catch(handleFirebaseAuthError);
+      }
 
-        vm.user.email = firebaseUser.user.email;
-        vm.user.name = firebaseUser.user.displayName;
+      if (provider === 'google') {
+        auth.$signInWithPopup(provider).then(authSuccessful).catch(handleFirebaseAuthError);
+      }
+    }
 
-        ngToast.create('Seu usuário foi criado com sucesso, ' + vm.user.name + '. Você já pode Linkar!');
-        vm.signupSuccess = true;
-      }).catch(handleFirebaseAuthError);
+    function authSuccessful(firebaseUser) {
+
+      vm.user.email = firebaseUser.user.email;
+      vm.user.name = firebaseUser.user.displayName;
+
+      vm.user.providers = [];
+
+      firebaseUser.user.providerData.forEach(function(provider) {
+        vm.user.providers.push({
+          uid: provider.uid,
+          email: provider.email,
+          displayName: provider.displayName,
+          providerId: provider.providerId,
+          photoURL: provider.photoURL
+        });
+      });
+
+      saveUser();
+
     }
 
     function handleFirebaseAuthError(error) {
       if (error.credential && error.code === 'auth/account-exists-with-different-credential') {
         auth.$getAuth().link(error.credential).then(function(user) {
-          console.log("Account linking success", user);
+          console.log(user);
+          authSuccessful(user);
         }, function(error) {
           console.log("Account linking error", error);
         });

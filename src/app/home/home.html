@@ -32,8 +32,8 @@
         </div>
         <div class="r-form-1-bottom">
 
-          <p><a type="button" class="btn btn-primary btn-social-login" ng-click="vm.firebaseAuth('facebook')" ><i class="fa fa-facebook"></i> Usando o Facebook</a></p>
-          <p><a type="button" class="btn btn-danger btn-social-login" ng-click="vm.firebaseAuth('google')" ><i class="fa fa-google"></i> Usando o Google</a></p>
+          <p><a type="button" class="btn btn-primary btn-social-login" ng-click="vm.login('facebook')" ><i class="fa fa-facebook"></i> Usando o Facebook</a></p>
+          <p><a type="button" class="btn btn-danger btn-social-login" ng-click="vm.login('google')" ><i class="fa fa-google"></i> Usando o Google</a></p>
           <p><a type="button" class="btn btn-warning btn-social-login" ng-click="vm.isFormVisible = true" ><i class="fa fa-pencil"></i> Preencher manualmente</a></p>
 
         </div>
@@ -46,15 +46,15 @@
             </div>
             <div class="form-group">
               <label class="sr-only" for="r-form-1-email">Email</label>
-              <input type="email" name="r-form-1-email" placeholder="seu@email.com" class="r-form-1-email form-control" id="r-form-1-email"
+              <input type="email" name="r-form-1-email" placeholder="Seu e-mail" class="r-form-1-email form-control" id="r-form-1-email"
                 ng-model="vm.user.email">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label class="sr-only" for="r-form-1-last-name">CPF</label>
               <input type="text" name="r-form-1-last-name" placeholder="Número do seu CPF" class="r-form-1-last-name form-control" id="r-form-1-last-name"
                 ng-model="vm.user.cpf"
                 ui-br-cpf-mask>
-            </div>
+            </div> -->
             <div class="form-group">
               <label class="sr-only" for="r-form-1-password">Senha</label>
               <input type="password" name="r-form-1-password" placeholder="Escolha sua senha" class="r-form-1-password form-control" id="r-form-1-password"
@@ -124,14 +124,14 @@
   firebase.initializeApp(config);
 </script>
 
-<script>(function(d, s, id) {
+<!-- <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=955797851207724";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-</script>
+</script> -->
 
 <ng-include src="'app/home/modal/privacidade.modal.html'"></ng-include>
 
