@@ -24,7 +24,7 @@ jQuery(document).ready(function() {
 	/*
 	* Background slideshow
 	*/
-	$('.top-content').backstretch("https://static.clubelinkar.com.br/images/backgrounds/background.jpg");
+	$('.top-content').backstretch("https://clubelinkar.com.br/assets/images/backgrounds/background.jpg");
 	$('.testimonials-container').backstretch("/assets/images/backgrounds/1.jpg");
 
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function(){
